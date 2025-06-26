@@ -1,7 +1,7 @@
 package cl.comunidadinfeliz.service;
 
 import cl.comunidadinfeliz.model.NoPago;
-import cl.comunidadinfeliz.repository.PagoRepository;
+import cl.comunidadinfeliz.repository.NoPagoRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
@@ -19,6 +19,7 @@ public class PagoService {
     }
 
     public List<NoPago> obtenerPagosPorDepto(String depto) {
-        return NopagoRepository.findByDepto(depto);
+        return pagoRepository.findByDepto(depto);
     }
 }
+
